@@ -1,48 +1,71 @@
-BoxLayoutExample:
-<BoxLayoutExample>:
-    orientation: "horizontal"
-    Button:
-        text: "A"
-        #size: "100dp","60dp"
-        # properties which are set by size_hint are responsible to size.
-        # for button a height is responseble but not width becase it's set by size .
-        size_hint: None, .7 # if you want to use size so your size_hint should be none for that property.or you can do this
-        width: "100dp"
-        # height: "60dp"
+AnchorLayoutExample:
 
-    Button:
-        text: "B"
-        # we can use pos_hint to move button arround using 3 perameters in dictionary
-        # {"x","center_x","right"}
-        # {"y","center_y","top"}
-        size_hint_x: .7
-        size_hint_y: 1
+<AnchorLayoutExample>:
+    
+    # right , left , center
+    anchor_x:"center"
+    # top , bottom , center
+    anchor_y:"top"
+
+    #  Button:
         
-        pos_hint: {"right":1}
-
+    #     text: "A"
+    #     size_hint: .1,.1
     BoxLayout:
-        orientation: "vertical"
-        spacing: "10dp"
+        size_hint: .2 , .2
+        spacing: "3dp"
+        Button: 
+            text: "A"
         Button:
-            text: "C1"
-        Button:
-            text: "C2"
-        Button:
-            text: "C3"
-        Button:
-            text: "C4"
-
-<MainWidget>: 
-    Button:
-        text: "Hello"
-        size: "40dp","40dp"
-        pos:  "100dp","200dp"
-        color: 0,0,1,1
+            text: "B"
 
 
-    Label:
-        text: "Hello2"
-        size: "40dp","40dp"
-        pos:  "200dp","300dp"
-        color: 1,0,0,1
+
+# BoxLayoutExample:
+# <BoxLayoutExample>:
+#     orientation: "horizontal"
+#     Button:
+#         text: "A"
+#         #size: "100dp","60dp"
+#         # properties which are set by size_hint are responsible to size.
+#         # for button a height is responseble but not width becase it's set by size .
+#         size_hint: None, .7 # if you want to use size so your size_hint should be none for that property.or you can do this
+#         width: "100dp"
+#         # height: "60dp"
+
+#     Button:
+#         text: "B"
+#         # we can use pos_hint to move button arround using 3 perameters in dictionary
+#         # {"x","center_x","right"}
+#         # {"y","center_y","top"}
+#         size_hint_x: .7
+#         size_hint_y: 1
+        
+#         pos_hint: {"right":1}
+
+#     BoxLayout:
+#         orientation: "vertical"
+#         spacing: "10dp"
+#         Button:
+#             text: "C1"
+#         Button:
+#             text: "C2"
+#         Button:
+#             text: "C3"
+#         Button:
+#             text: "C4"
+
+# <MainWidget>: 
+#     Button:
+#         text: "Hello"
+#         size: "40dp","40dp"
+#         pos:  "100dp","200dp"
+#         color: 0,0,1,1
+
+
+#     Label:
+#         text: "Hello2"
+#         size: "40dp","40dp"
+#         pos:  "200dp","300dp"
+#         color: 1,0,0,1
 
