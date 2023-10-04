@@ -1,6 +1,6 @@
 BoxLayoutExample:
 <BoxLayoutExample>:
-    orientation: 'vertical'
+    orientation: "horizontal"
     Button:
         text: "A"
         #size: "100dp","60dp"
@@ -15,12 +15,22 @@ BoxLayoutExample:
         # we can use pos_hint to move button arround using 3 perameters in dictionary
         # {"x","center_x","right"}
         # {"y","center_y","top"}
-        size_hint_x: .5
+        size_hint_x: .7
+        size_hint_y: 1
         
         pos_hint: {"right":1}
 
-    Label:
-        text: "C"
+    BoxLayout:
+        orientation: "vertical"
+        spacing: "10dp"
+        Button:
+            text: "C1"
+        Button:
+            text: "C2"
+        Button:
+            text: "C3"
+        Button:
+            text: "C4"
 
 <MainWidget>: 
     Button:
