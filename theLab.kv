@@ -3,8 +3,22 @@ BoxLayoutExample:
     orientation: 'vertical'
     Button:
         text: "A"
+        #size: "100dp","60dp"
+        # properties which are set by size_hint are responsible to size.
+        # for button a height is responseble but not width becase it's set by size .
+        size_hint: None, .7 # if you want to use size so your size_hint should be none for that property.or you can do this
+        width: "100dp"
+        # height: "60dp"
+
     Button:
         text: "B"
+        # we can use pos_hint to move button arround using 3 perameters in dictionary
+        # {"x","center_x","right"}
+        # {"y","center_y","top"}
+        size_hint_x: .5
+        
+        pos_hint: {"right":1}
+
     Label:
         text: "C"
 
